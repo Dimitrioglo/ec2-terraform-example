@@ -11,3 +11,6 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 }
+data "aws_security_group" "selected" {
+  id = "${var.security_group_id}"
+}
