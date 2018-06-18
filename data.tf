@@ -11,6 +11,7 @@ data "aws_ami" "ubuntu" {
     values = ["hvm"]
   }
 }
-data "aws_security_group" "selected" {
+
+data "aws_security_group" "sg_adding" {
   id = "${var.security_group_id}"
 }
