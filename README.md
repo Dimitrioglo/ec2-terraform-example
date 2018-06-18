@@ -1,7 +1,7 @@
-##EC2 instance terraform script
+## EC2 instance terraform script
 
 
 Commands to run TFScript
-*terraform init
-*terraform plan
-*terraform apply 
+* terraform init
+* terraform plan
+* terraform apply 
