@@ -15,3 +15,7 @@ data "aws_ami" "ubuntu" {
 data "aws_security_group" "sg_adding" {
   id = "${var.security_group_id}"
 }
+
+data "aws_security_group" "sg_adding_ssh" {
+  id = "${var.security_group_id_ssh}"
+}

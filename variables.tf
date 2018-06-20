@@ -21,7 +21,11 @@
     default = "sg-70a53607"
   }
 
+  variable "security_group_id_ssh" {
+    default = "sg-d525569c"
+  }
+
   variable "key_name" {
     type = "string"
-    default = ""
+    default = "vdimitrioglo"
   }
