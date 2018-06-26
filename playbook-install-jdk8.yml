@@ -1,15 +1,21 @@
 ---
-- hosts: all
-  tasks:
+- hosts: 127.0.0.1
+  become: yes
+  become_method: sudo
 
+  tasks:
   - name: Install java 8 preresequesits
     apt: name=python-software-properties
-
+    tags: - build
+  
   - name: Add Java 8 repository
     apt_repository: repo='ppa:webupd8team/java'
+    tags: - build
 
   - name: Agree to oracle license
     debconf: name=oracle-java8-installer question=shared/accepted-oracle-license-v1-1 vtype=select value=true
+     tags: - build
 
   - name: Install Java 8
     apt: name=oracle-java8-installer force=yes
+     tags: - build
